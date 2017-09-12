@@ -1,0 +1,8 @@
+<button ng-click="vm.pickFile()">Upload</button>
+<img ng-src="{{vm.file.url | fpConvert:{w: 400} }}" alt="{{vm.file.filename}}" />
+
+<a href="/add">Add File</a>
+
+<ul>
+  <li ng-repeat="m in vm.file">{{m.media}} <a href="/editFile/{{m._id}}">Edit</a> <a href="#" ng-click="vm.deleteFile(m._id)">Delete</a></li>
+</ul>
